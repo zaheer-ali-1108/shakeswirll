@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { getDrinks } from "../services/api";
+import { getDrinks, API_BASE_URL } from "../services/api";
 
 const fallback = [
   { _id: "1", name: "Oreo Delight", category: "shake", description: "Creamy blend of Oreo cookies.", price: 350, image: "/images/oreo.png", bgColor: "#1a1a1a" },
@@ -79,7 +79,7 @@ export default function ShakeDeals() {
                 }} />
                 <div style={{ textAlign: "center", marginBottom: "16px" }}>
                   <img
-                    src={d.image?.startsWith("/uploads") ? `http://localhost:5000${d.image}` : d.image}
+                    src={d.image?.startsWith("/uploads") ? `${API_BASE_URL}${d.image}` : d.image}
                     alt={d.name}
                     style={{ width: "100px", height: "130px", objectFit: "contain",
                       filter: `drop-shadow(0 15px 25px ${d.bgColor || "#ff6b35"}55)` }}

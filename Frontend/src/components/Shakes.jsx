@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { getDrinks } from "../services/api";
+import { getDrinks, API_BASE_URL } from "../services/api";
 
 const fallbackShakes = [
   { _id: "1", name: "Oreo Delight", category: "shake", description: "Creamy blend of Oreo cookies and chilled milk.", price: 350, image: "/images/oreo.png", bgColor: "#1a1a1a", featured: true },
@@ -85,7 +85,7 @@ export default function ShakesGrid() {
 
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "20px", position: "relative" }}>
                 <motion.img
-                  src={shake.image?.startsWith("/uploads") ? `http://localhost:5000${shake.image}` : shake.image}
+                  src={shake.image?.startsWith("/uploads") ? `${API_BASE_URL}${shake.image}` : shake.image}
                   alt={shake.name}
                   animate={{ y: hovered === shake._id ? -8 : 0 }}
                   transition={{ duration: 0.4 }}

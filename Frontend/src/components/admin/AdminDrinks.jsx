@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AdminLayout from "./AdminLayout";
-import { getAllDrinksAdmin, createDrink, updateDrink, deleteDrink } from "../../services/api";
+import { getAllDrinksAdmin, createDrink, updateDrink, deleteDrink, API_BASE_URL } from "../../services/api";
 import toast from "react-hot-toast";
 
 const EMPTY = {
@@ -173,7 +173,7 @@ export default function AdminDrinks() {
               }}>
                 {d.image ? (
                   <img
-                    src={d.image.startsWith("/uploads") ? `http://localhost:5000${d.image}` : d.image}
+                    src={d.image.startsWith("/uploads") ? `${API_BASE_URL}${d.image}` : d.image}
                     alt={d.name}
                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     onError={(e) => { e.target.style.display = "none"; }}
