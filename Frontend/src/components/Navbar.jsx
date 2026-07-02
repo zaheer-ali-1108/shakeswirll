@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop links */}
-          <div style={{ display: "flex", alignItems: "center", gap: "8px" }} className="hidden md:flex">
+          <div style={{ alignItems: "center", gap: "8px" }} className="hidden md:flex">
             {navLinks.map((link) => (
               <Link key={link.path} to={link.path} style={{ textDecoration: "none" }}>
                 <motion.div
@@ -88,7 +88,7 @@ export default function Navbar() {
           </div>
 
           {/* Auth buttons */}
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }} className="hidden md:flex">
+          <div style={{ alignItems: "center", gap: "12px" }} className="hidden md:flex">
             {user ? (
               <>
                 <span style={{ fontSize: "13px", color: "#888" }}>Hi, {user.name}</span>

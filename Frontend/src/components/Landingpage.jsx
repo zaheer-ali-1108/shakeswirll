@@ -40,7 +40,7 @@ export default function LandingPage() {
   const cur = shakes[active];
 
   return (
-    <div style={{ minHeight: "100vh", overflow: "hidden" }}>
+    <div style={{ minHeight: "100vh" }} className="overflow-x-hidden overflow-y-auto md:overflow-hidden">
       {/* Hero Section */}
       <motion.section
         ref={heroRef}
@@ -53,8 +53,8 @@ export default function LandingPage() {
           alignItems: "center",
           paddingTop: "80px",
           position: "relative",
-          overflow: "hidden",
         }}
+        className="overflow-x-hidden overflow-y-auto md:overflow-hidden py-12 md:py-0"
       >
         {/* Decorative blobs */}
         <motion.div
@@ -88,13 +88,8 @@ export default function LandingPage() {
 
         <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px", width: "100%" }}>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "60px",
-              alignItems: "center",
-            }}
-            className="grid-cols-1 md:grid-cols-2"
+            style={{}}
+            className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-[60px] items-center"
           >
             {/* Left text */}
             <div>

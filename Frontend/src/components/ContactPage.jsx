@@ -52,8 +52,8 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: "40px", alignItems: "start" }}
-          className="grid-cols-1 md:grid-cols-2">
+        <div style={{ alignItems: "start" }}
+          className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-[40px]">
 
           {/* Info side */}
           <motion.div
