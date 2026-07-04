@@ -133,7 +133,7 @@ export default function Footer() {
             <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
               {[
                 { icon: "📍", text: "Jhelun,Punjab, Pakistan" },
-                { icon: "📞", text: "+92 336 9334198cd frontend" },
+                { icon: "📞", text: "+92 336 9334198" },
                 { icon: "✉️", text: "hello@shakehub.pk" },
               ].map((c) => (
                 <div key={c.text} style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
